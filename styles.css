@@ -1,0 +1,16 @@
+.Arial {
+    font-family: Arial;
+    font-weight: bold;
+}
+.position {
+    height: 10em;
+    position: relative
+}
+.position p {
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
