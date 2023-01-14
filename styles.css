@@ -1,5 +1,5 @@
 .Arial {
-    font-family: Arial;
+    font-family: Arial, serif;
     font-weight: bold;
 }
 .position {
@@ -7,10 +7,9 @@
     position: relative
 }
 .position p {
-    margin: 0;
     position: absolute;
     top: 100%;
     left: 50%;
-    margin-right: -50%;
+    margin: 0 -50% 0 0;
     transform: translate(-50%, -50%)
 }
