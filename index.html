@@ -4,9 +4,15 @@
     <title>Schüler experimentieren - Vertikale Gärten</title>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <div><h1 class="Arial" style="text-align:center">Schüler experimentieren - Vertikale Gärten</h1></div>
-    <div id="curve_chart"></div>
-    <div id="curve_chart2"></div>
+    <div>
+        <h1 class="Arial" style="text-align:center">Schüler experimentieren - Vertikale Gärten</h1>
+        <p class="Arial" style="text-align:center">von Ferdinand Saurenbach und Alexander Rust</p>
+        <p class="Arial" style="text-align:center">Betreuungslehrer: M. Gärtig</p>
+        <p class="Arial" style="text-align:center">Riemenschneider Gymnasium Würzburg Klasse 8c</p>
+        <p class="Arial" style="text-align:center">2022-2023</p>
+    </div>
+    <div id="line_chart"></div>
+    <div id="line_chart2"></div>
     <div>
         <script type="text/javascript">
 
@@ -232,16 +238,16 @@
                         easing: 'in'
                     }
                 };
-                var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-                document.getElementById('curve_chart').style.margin = 'auto';
-                document.getElementById('curve_chart').style.width = '100%';
-                document.getElementById('curve_chart').style.height = '100%';
+                const chart = new google.visualization.LineChart(document.getElementById('line_chart'));
+                document.getElementById('line_chart').style.margin = 'auto';
+                document.getElementById('line_chart').style.width = '100%';
+                document.getElementById('line_chart').style.height = '100%';
                 chart.draw(data, options);
             }
 
 
             function Infrarot1() {
-                var data = google.visualization.arrayToDataTable([
+                const data = google.visualization.arrayToDataTable([
                     ['Zeit', 'Bepflanzt', 'Unbepflanzt'],
                     ["	11:40	", -0.125, 0.437999999999999],
                     ["	11:45	", -1.062, 0.875],
@@ -265,19 +271,24 @@
 
 
                 ]);
-                var options = {
+                const options = {
                     title: 'Temperaturunterschiede mit Infrarotlampe',
                     curveType: 'function',
+
                     animation: {
                         startup: true,
                         duration: 800,
                         easing: 'in'
+
                     }
                 };
-                var chart = new google.visualization.LineChart(document.getElementById('curve_chart2'));
+                var chart = new google.visualization.LineChart(document.getElementById('line_chart2'));
                 //  document.getElementById('curve_chart').style.margin = 'auto';
-                document.getElementById('curve_chart2').style.width = '70%';
-                document.getElementById('curve_chart2').style.height = '70%';
+                //Make this chart align with the other one
+                document.getElementById('line_chart2').style.width = '100%';
+
+                document.getElementById('line_chart2').style.height = '100%';
+
                 chart.draw(data, options);
             }
 
