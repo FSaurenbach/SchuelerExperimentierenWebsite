@@ -11,16 +11,24 @@
         <p class="Arial" style="text-align:center">Riemenschneider Gymnasium Würzburg Klasse 8c</p>
         <p class="Arial" style="text-align:center">2022-2023</p>
         <br><br>
-        <h4 class="Arial" style="text-align: center"> Diese Website stellt interaktive Graphen der Messungen, sowie Wärmebildkameravideos des Projektes da. <br> Link zum Code der website auf GitHub: <a href="https://github.com/FSaurenbach/SchuelerExperimentierenWebsite">https://github.com/FSaurenbach/SchuelerExperimentierenWebsite</a></h4>
+        <h4 class="Arial" style="text-align: center"> Diese Website stellt interaktive Graphen der Messungen, sowie
+            Wärmebildkameravideos des Projektes dar. <br> Link zum Code der website auf GitHub: <a
+                href="https://github.com/FSaurenbach/SchuelerExperimentierenWebsite">https://github.com/FSaurenbach/SchuelerExperimentierenWebsite</a>
+        </h4>
     </div>
     <div id="line_chart"></div>
     <div id="line_chart2"></div>
+    <div id="line_chart3"></div>
+    <div id="line_chart4"></div>
     <div>
         <script type="text/javascript">
 
             google.charts.load('current', {'packages': ['corechart']});
             google.charts.setOnLoadCallback(ZweiTageImFreien);
             google.charts.setOnLoadCallback(Infrarot1);
+            google.charts.setOnLoadCallback(Erwaermung);
+            google.charts.setOnLoadCallback(Luftfeuchtigkeit);
+
             function ZweiTageImFreien() {
 
                 var data = google.visualization.arrayToDataTable([
@@ -294,6 +302,64 @@
                 chart.draw(data, options);
             }
 
+            function Erwaermung() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Zeit', 'Bepflanzt', 'Unbepflanzt'],
+                    ["	0:00	", 10.3, 10.8],
+                    ["	0:05	", 14.6, 16.1],
+                    ["	0:10	", 14.2, 17.3],
+                    ["	0:15	", 14.6, 19.4],
+                    ["	0:20	", 15.2, 20.1],
+
+                ])
+                const options = {
+                    title: 'Erwärmung von etwa 12 Grad zu Zimmertemperatur',
+                    curveType: 'function',
+
+                    animation: {
+                        startup: true,
+                        duration: 800,
+                        easing: 'in'
+
+                    }
+                };
+                const chart = new google.visualization.LineChart(document.getElementById('line_chart3'));
+                document.getElementById('line_chart3').style.width = '100%';
+
+                document.getElementById('line_chart3').style.height = '100%';
+
+                chart.draw(data, options);
+            }
+
+            function Luftfeuchtigkeit() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Zeit', 'Raumluftfeuchtigkeit', 'Bepflanzt'],
+                    ["	14:50	", 48.0, 37.0],
+                    ["	14:52	", 48.0, 37.0],
+                    ["	14:55	", 48.0, 48.0],
+                    ["	14:57	", 47.0, 59.0],
+                    ["	14:59	", 45.0, 71.0],
+
+
+                ])
+                const options = {
+                    title: 'Luftfeuchtigkeit in Prozent nach gießen',
+                    curveType: 'function',
+
+                    animation: {
+                        startup: true,
+                        duration: 800,
+                        easing: 'in'
+
+                    }
+                };
+                const chart = new google.visualization.LineChart(document.getElementById('line_chart4'));
+                document.getElementById('line_chart4').style.width = '100%';
+
+                document.getElementById('line_chart4').style.height = '100%';
+
+                chart.draw(data, options);
+            }
 
         </script>
     </div>
@@ -301,13 +367,18 @@
         <h1 class="Arial" style="text-align: center">Messungen mit Wärmebildkameravideo</h1>
         <div class="Arial videoContainer">
             <h2>Infrarotmessung Nr.1 mit Wärmebildkamera</h2>
-            <video src="Infrarot1.mp4"  controls="controls"></video>
+            <iframe width="1831" height="815" src="https://www.youtube.com/embed/6KbEPAPll64" title="Infrarot1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
             <h2>Infrarotmessung Nr.2 mit Wärmebildkamera</h2>
-            <video src="Infrarot2.mp4" controls="controls"></video>
+            <iframe width="1831" height="815" src="https://www.youtube.com/embed/kIBps-Y77M8" title="Infrarot2"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
         </div>
 
 
-        <
     </div>
 
 
