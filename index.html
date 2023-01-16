@@ -10,6 +10,8 @@
         <p class="Arial" style="text-align:center">Betreuungslehrer: M. Gärtig</p>
         <p class="Arial" style="text-align:center">Riemenschneider Gymnasium Würzburg Klasse 8c</p>
         <p class="Arial" style="text-align:center">2022-2023</p>
+        <br><br>
+        <h4 class="Arial" style="text-align: center"> Diese Website stellt interaktive Graphen der Messungen, sowie Wärmebildkameravideos des Projektes da. <br> Link zum Code der website auf GitHub: <a href="https://github.com/FSaurenbach/SchuelerExperimentierenWebsite">https://github.com/FSaurenbach/SchuelerExperimentierenWebsite</a></h4>
     </div>
     <div id="line_chart"></div>
     <div id="line_chart2"></div>
@@ -282,7 +284,7 @@
 
                     }
                 };
-                var chart = new google.visualization.LineChart(document.getElementById('line_chart2'));
+                const chart = new google.visualization.LineChart(document.getElementById('line_chart2'));
                 //  document.getElementById('curve_chart').style.margin = 'auto';
                 //Make this chart align with the other one
                 document.getElementById('line_chart2').style.width = '100%';
@@ -294,6 +296,18 @@
 
 
         </script>
+    </div>
+    <div>
+        <h1 class="Arial" style="text-align: center">Messungen mit Wärmebildkameravideo</h1>
+        <div class="Arial videoContainer">
+            <h2>Infrarotmessung Nr.1 mit Wärmebildkamera</h2>
+            <video src="Infrarot1.mp4"  controls="controls"></video>
+            <h2>Infrarotmessung Nr.2 mit Wärmebildkamera</h2>
+            <video src="Infrarot2.mp4" controls="controls"></video>
+        </div>
+
+
+        <
     </div>
 
 
